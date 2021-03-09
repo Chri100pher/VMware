@@ -217,7 +217,7 @@ Get NTP configuration by host (updated)
 
 Get DvPortGroup per VM for a datastore
 
-	$vms = get-vm -datastore NFS_Prophet_Mig ; foreach ($vm in $vms){$DvPortGroup = Get-VirtualPortGroup -vm $vm.Name ; $vm | Select @{N="Name";E={$_.name}}, @{N="DvPortGroup";E={$DvPortGroup.Name}}} | ft -autosize
+	$vms = get-vm -datastore DATASTORE_NAME ; foreach ($vm in $vms){$DvPortGroup = Get-VirtualPortGroup -vm $vm.Name ; $vm | Select @{N="Name";E={$_.name}}, @{N="DvPortGroup";E={$DvPortGroup.Name}}} | ft -autosize
 
 
 Add NFS datastore on All Hosts on a Cluster
